@@ -1,20 +1,22 @@
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Foundation Template | Workspace</title>
+    <title>Web Template</title>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+
+    <!-- Framework -->
+    <link rel="stylesheet" href="css/template.css"/>
+    <!-- Website styles -->
     <link rel="stylesheet" href="css/style.css"/>
-    <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
 
 <section class="navigation contain-to-grid sticky">
-    <nav class="top-bar" role="navigation" data-topbar data-options="sticky_on: small">
+    <nav class="top-bar" role="navigation" data-topbar data-options="sticky_on: large">
         <ul class="title-area">
             <li class="name">
                 <h1><a href="#">My Site</a></h1>
@@ -42,48 +44,44 @@
 </section>
 
 <section class="hero -under-navigation">
-<div class="row full-width collapse">
-    <div class="large-12 columns">
+    <div class="row full-width collapse">
+        <div class="large-12 columns">
 
-        <div class="hide-for-small">
-            <div id="featured">
-                <img alt="slide image" src="http://placehold.it/1000x400&amp;text=Slide%20Image">
+            <div class="hide-for-small">
+                <div id="featured">
+                    <img alt="slide image" src="http://placehold.it/1000x400&amp;text=Slide%20Image">
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="small-12 show-for-small">
-                <img src="http://placehold.it/1000x600&amp;text=For%20Small%20Screens">
+            <div class="row">
+                <div class="small-12 show-for-small">
+                    <img src="http://placehold.it/1000x600&amp;text=For%20Small%20Screens">
+                </div>
             </div>
         </div>
     </div>
-</div>
 </section>
 
-<section class="content">
-<div class="row">
-<div class="large-12 columns">
-<div class="row">
+<section class="content featured">
+    <div class="row">
 
-<div class="large-3 small-6 columns">
-<img src="http://placehold.it/250x250&amp;text=Thumbnail">
-<h6 class="panel">Description</h6>
-</div>
-<div class="large-3 small-6 columns">
-<img src="http://placehold.it/250x250&amp;text=Thumbnail">
-<h6 class="panel">Description</h6>
-</div>
-<div class="large-3 small-6 columns">
-<img src="http://placehold.it/250x250&amp;text=Thumbnail">
-<h6 class="panel">Description</h6>
-</div>
-<div class="large-3 small-6 columns">
-<img src="http://placehold.it/250x250&amp;text=Thumbnail">
-<h6 class="panel">Description</h6>
-</div>
-</div>
-</div>
-</div>
+            <div class="large-3 small-6 columns item">
+                <img src="http://placehold.it/250x250&amp;text=Thumbnail">
+                <h6 class="panel">Description</h6>
+            </div>
+            <div class="large-3 small-6 columns item">
+                <img src="http://placehold.it/250x250&amp;text=Thumbnail">
+                <h6 class="panel">Description</h6>
+            </div>
+            <div class="large-3 small-6 columns item">
+                <img src="http://placehold.it/250x250&amp;text=Thumbnail">
+                <h6 class="panel">Description</h6>
+            </div>
+            <div class="large-3 small-6 columns item">
+                <img src="http://placehold.it/250x250&amp;text=Thumbnail">
+                <h6 class="panel">Description</h6>
+            </div>
+    </div>
 </section>
 
 <div class="row">
@@ -152,10 +150,7 @@ erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget 
 </div>
 </footer>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script>
-$(document).foundation();
-</script>
+
+<script src="js/template.min.js"></script>
 </body>
 </html>

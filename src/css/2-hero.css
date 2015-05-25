@@ -1,0 +1,13 @@
+section.hero img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 40.063em) {
+    .hero.under-navigation {
+        margin-top: -73px;
+    }
+}
+
+section.featured .item img {
+	width: 100%;
+}

@@ -1,0 +1,81 @@
+
+/* navigation */
+.navigation {
+    z-index: 1;
+    background: transparent;
+}
+
+.top-bar.expanded .title-area {
+    background: transparent;
+}
+
+
+.navigation {
+    z-index: 1;
+    background: transparent;
+    position: relative;
+}
+.fixed.navigation {
+    position: fixed;
+}
+
+/* top bar */
+.top-bar * {
+    transition: all 0.2s ease;
+}
+.top-bar {
+    height: auto;
+    max-height: 2.8125rem;
+    transition: max-height 0.5s ease;
+    background: transparent;
+}
+.top-bar.expanded {
+    max-height: 1000px;
+}
+
+.top-bar .name h1 a {
+    color: #000;
+}
+
+/* desktop */
+@media only screen and (min-width: 40.063em) {
+    .contain-to-grid .top-bar {
+      max-width: 1170px;
+    }
+    .top-bar {
+        max-height: none;
+    }
+    .top-bar .name h1 a {
+        margin: 12px 0;
+    }
+    .top-bar-section > ul > li {
+        /* spacing for li to adjust nav height */
+        margin: 12px 0;
+    }
+
+    .fixed .top-bar .name h1 a {
+        margin: 0;
+    }
+    .fixed .top-bar-section > ul > li {
+        /* spacing for li to adjust nav height */
+        margin: 0;
+    }
+
+    /* nav under */
+    .navigation.nav-under .top-bar-section {
+        clear: both;
+    }
+    .top-bar .name,
+    .navigation.nav-under .top-bar .name h1 a {
+        height: 3.8125rem;
+        line-height: 3.8125rem;
+    }
+    .navigation.nav-under .top-bar .name h1 a,
+    .navigation.nav-under .top-bar-section > ul > li {
+        margin: 0;
+    }
+    .navigation.sticky .top-bar .name {
+        height: auto;
+        line-height: auto;
+    }
+}

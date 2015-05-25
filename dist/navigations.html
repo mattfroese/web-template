@@ -1,20 +1,27 @@
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Foundation Template | Workspace</title>
+    <title>Web Template</title>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+
+    <!-- Framework -->
+    <link rel="stylesheet" href="css/template.css"/>
+    <!-- Website styles -->
     <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- Demo styles -->
     <style>
-    .navigation {
+    .navigation .top-bar .name h1 a {
+        color: #000;
+    }
+    section.content {
         background: whiteSmoke;
     }
     </style>
-    <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
 
@@ -58,7 +65,7 @@
     <div class="row">
         <div class="large-12 columns">
             <h2>Nav Under</h2>
-            <p>Nav under brand</p>
+            <p>Navigaton is displayed beneath the brand. Just apply nav-under to the navigation section.</p>
         </div>
     </div>
 </section>
@@ -88,10 +95,6 @@
     </nav>
 </section>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script>
-$(document).foundation();
-</script>
+<script src="js/template.min.js"></script>
 </body>
 </html>

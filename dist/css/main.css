@@ -1,0 +1,25 @@
+.fixed.navigation {
+    background: red;
+}
+
+/* nav colors */
+.top-bar-section ul li {
+    background: transparent;
+}
+.top-bar-section .has-dropdown > a:after,
+.top-bar-section ul li > a {
+    color: #000;
+}
+.top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
+    color: #000;
+}
+.top-bar .toggle-topbar.menu-icon a {
+    color: #000;
+}
+.top-bar .toggle-topbar.menu-icon a span::after {
+    box-shadow:0 0 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
+}
+
+.top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
+    color: #000;
+}
