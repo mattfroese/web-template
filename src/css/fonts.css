@@ -1,7 +1,9 @@
 body {
-	font: $primaryFont;
+	font-family: $primaryFontFamily;
+	font-size: $primaryFontSize;
 }
 
 h1, h2, h3, h4 {
-	font: $headingFont;
+	font-family: $headingFontFamily; 
+	color: $primaryColor;
 }

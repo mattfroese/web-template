@@ -1,46 +1,79 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var postcss = require('gulp-postcss');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    postcss = require('gulp-postcss'),
+    mario = require('gulp-plumber'),
+    sourcemaps = require('gulp-sourcemaps'),    
+    browserSync = require('browser-sync').create();
 
-gulp.task('scripts', function() {
-  	return gulp.src([
-		'./bower_components/modernizr/modernizr.js',
+var psAssetsFolder = 'psd/ps-extractassets-folder/**/*',
+    jsfiles = [
+        './bower_components/modernizr/modernizr.js',
         './bower_components/jquery/dist/jquery.js',
         './bower_components/foundation/js/foundation.js',
         './src/js/*.js'
-  	])
+    ],
+    cssfiles = [
+        'bower_components/foundation/css/foundation.css',
+        'src/css/media-components.css',
+        'src/css/main.css'
+    ];
+
+
+function mushroom(e){
+  if(e.fileName)
+    console.log(e.fileName);
+  console.log(e.message);
+  require('beepbeep')(2);
+  this.emit('end');
+}
+
+gulp.task('scripts', function() {
+  	return gulp.src( jsfiles )
+    .pipe(mario(mushroom))
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest('./dist/js/'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('css', function() {
 	var processors = [
-        // require('autoprefixer')('last 1 version'),
-        // require('css-mqpacker'),
-        // require('csswring'),
-        require("postcss-import"),
-        require('postcss-simple-vars')
+        require('autoprefixer')('last 1 version'),
+        require('csswring'),
+        require('postcss-import'),
+        require('postcss-simple-vars'),
+        require('postcss-nested'),
+        require('css-mqpacker')
     ];
-  	return gulp.src([
-        'bower_components/foundation/css/foundation.css',
-        'src/css/media-components.css',
-        /* template specific */
-        // 'src/css/_variables.css',
-        // 'src/css/scaffolding.css',
-        // 'src/css/grid.css',
-        // 'src/css/navigation.css',
-        // 'src/css/hero.css',
-        // 'src/css/section.css',
-        'src/css/main.css'
-	])
+  	return gulp.src(cssfiles)
+    .pipe(mario(mushroom))
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest('./dist/css/'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['scripts','css']);
+gulp.task('psd', function() {
+    return gulp
+        .src(psAssetsFolder)
+        .pipe(mario(mushroom))
+        .pipe(gulp.dest('./dist/img/'));
+});
+
+gulp.task('reload', function() { browserSync.reload(); });
+
+gulp.task('stream', function () {
+    browserSync.init({
+        server: "./dist"
+    });
+
+    gulp.watch('src/css/*.css', ['css']);
+    gulp.watch('src/js/*.js', ['scripts']);
+    gulp.watch(psAssetsFolder, ['psd','reload']);
+    gulp.watch('dist/*.html', ['reload']);
+});
+
+gulp.task('default', ['scripts','css','psd']);

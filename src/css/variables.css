@@ -1,4 +1,13 @@
-$primaryFont: 16pt/18pt Arial, Helvetica;
+$primaryFontFamily: "effra",sans-serif;
+$primaryFontSize: 14pt;
 
-$headingFont: $primaryFont;
-$navigationFont: $primaryFont;
+$headingFontFamily: 'Georgia', serif;
+
+$primaryColor: #74110a;
+$secondaryColor: #CB9E0A;
+
+
+$navigationFontFamily: "effra",sans-serif;
+$navigationFontSize: 12pt;
+$navigationTextColor: #fff;
+$navigationFixedTextColor: $primaryColor;
