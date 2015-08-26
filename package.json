@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "devDependencies": {
     "autoprefixer": "^5.1.1",
+    "browser-sync": "^2.8.2",
     "css-mqpacker": "^3.1.0",
     "csswring": "^3.0.5",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
+    "gulp-plumber": "*",
     "gulp-postcss": "^5.1.8",
     "gulp-sourcemaps": "^1.5.2",
     "postcss-import": "^5.2.2",
