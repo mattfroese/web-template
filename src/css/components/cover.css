@@ -1,0 +1,55 @@
+.cover {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: table;
+  table-layout: fixed;
+  transition: height .2s ease;
+  position: relative;
+
+  .scroll-indicator  {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+
+  .cover-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 136px 11.5%;
+    width: 100%;
+  }
+}
+
+.cover-default {
+  background: $primaryColor url('../img/cover-bg.jpg') no-repeat center center;
+
+  @media only screen and (min-width: $small-breakpoint) {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .cover-content {
+    text-align: center;
+    h1 {
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    p {
+      color: rgba(255,255,255,0.8);
+    }
+  }
+
+  .scroll-indicator {
+    font-size: 3em;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

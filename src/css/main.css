@@ -1,10 +1,13 @@
 @import 'variables.css';
 
+@import 'animations.css';
 @import 'fonts.css';
 @import 'grid.css';
 @import 'navigation.css';
 @import 'section.css';
 @import 'hero.css';
+
+@import 'components/cover.css';
 
 .hidden {
 	display: none;
@@ -22,7 +25,7 @@
 .button {
 	background-color: $primaryColor;
 	border-radius: 5px;
-	font-family: $primaryFontFamily; 
+	font-family: $primaryFontFamily;
 	font-size: 1.1em;
 	font-weight: bold;
 	text-transform: uppercase;

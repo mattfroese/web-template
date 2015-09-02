@@ -1,58 +1,7 @@
 section.content {
    	padding: 26px;
 
-    @media only screen and (min-width: 40.063em) {
+    @media only screen and (min-width: $small-breakpoint) {
     	padding: 116px;
     }
-}
-
-section.financial {
-	background: url('../img/financial-bg.jpg') no-repeat top center;
-	background-size: cover;
-}
-section.community {
-	background: url('../img/community-bg.jpg') no-repeat top center;
-	background-size: cover;
-	text-align: right;
-}
-section.community .large-8 {
-	float: right;
-}
-
-section.info-graphic {
-	background: url('../img/info-graphic-bg.jpg') no-repeat top center #000;
-	background-size: 100% auto;
-	color: #fff;
-
-	h1 {
-		font-family: $primaryFontFamily;
-		color: #fff;
-	}
-	h2 {
-		font-family: $primaryFontFamily;
-		color: #e85349;
-		font-size: 1.2em;
-	}
-
-	.info-graphic {
-		max-width: 800px;
-		width: 100%;
-		margin: 0 auto;
-	}
-}
-
-
-section.contact {
-	background: url('../img/bot-contact-bg.png') top center no-repeat #1f1f1f;
-
-	.contact-form {
-		max-width: 800px;
-		margin: 0 auto;
-
-		h2 {
-			color: $secondaryColor;
-		}
-	}
-	
-
 }

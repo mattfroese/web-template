@@ -4,6 +4,10 @@ body {
 }
 
 h1, h2, h3, h4 {
-	font-family: $headingFontFamily; 
+	font-family: $headingFontFamily;
 	color: $primaryColor;
+}
+
+h1 {
+	font-size: 4em;
 }

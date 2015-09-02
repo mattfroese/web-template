@@ -3,24 +3,22 @@ section.hero img {
 }
 
 section.hero {
-	background: url('../img/header-bg.jpg') no-repeat $primaryColor;
-	background-size: cover;
-  	padding: 65px 20px 20px 20px;
+  background-size: cover;
 
-  	@media only screen and (min-width: 40.063em) {
-	    padding: 185px 0 100px 0;
-	}
+  @media only screen and (min-width: $medium-breakpoint) {
+    padding: 20px;
+  }
 
-  	p {
-  		color: #fff;
-  		max-width: 600px;
-  		margin: 40px auto;
-  		text-align: center;
-  	}
-	
-	.logo {
-		display: block;
-		margin: 0 auto;
-		width: auto;
-	}
+  p {
+  	color: #fff;
+  	max-width: 600px;
+  	margin: 40px auto;
+  	text-align: center;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+  }
 }

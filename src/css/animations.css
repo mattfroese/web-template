@@ -1,0 +1,16 @@
+@keyframes up-down {
+    0%   {transform:translateY(0px);}
+    50% {transform:translateY(10px);}
+    100% {transform:translateY(0px);}
+}
+
+.animate-up-down {
+    animation-name: up-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.animate-up-down-hover:hover {
+    animation-name: up-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

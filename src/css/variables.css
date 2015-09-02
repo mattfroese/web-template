@@ -1,13 +1,17 @@
-$primaryFontFamily: "effra",sans-serif;
+$primaryFontFamily: "Roboto",sans-serif;
 $primaryFontSize: 14pt;
 
-$headingFontFamily: 'Georgia', serif;
+$headingFontFamily: "Roboto", serif;
 
-$primaryColor: #74110a;
+$primaryColor: #008cba;
 $secondaryColor: #CB9E0A;
-
 
 $navigationFontFamily: "effra",sans-serif;
 $navigationFontSize: 12pt;
 $navigationTextColor: #fff;
 $navigationFixedTextColor: $primaryColor;
+
+$small-breakpoint:  640px;
+$medium-breakpoint: 1024px;
+$large-breakpoint:  1440px;
+$xlarge-breakpoint: 1920px;
